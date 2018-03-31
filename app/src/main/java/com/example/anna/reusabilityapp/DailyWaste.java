@@ -42,4 +42,16 @@ public class DailyWaste {
         return -2* dailyWaste.get(0).getCounter() + dailyTotalWaste();
 
     }
+
+    public int getTrash(){
+        return dailyWaste.get(0).getCounter();
+    }
+
+    public int getRecycling(){
+        return dailyWaste.get(1).getCounter();
+    }
+
+    public int getCompost(){
+        return dailyWaste.get(2).getCounter();
+    }
 }
