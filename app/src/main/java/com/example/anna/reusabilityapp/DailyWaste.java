@@ -32,6 +32,7 @@ public class DailyWaste {
 
     public int dailyTotalWaste(){
         int totalWaste = 0;
+
         for (Disposables disposables: dailyWaste){
             totalWaste+= disposables.getCounter();
         }
