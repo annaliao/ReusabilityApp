@@ -33,4 +33,42 @@ public class WeeklyWaste {
         }
         return weeklyCompost;
     }
+
+    public ArrayList<String> listOfDays(){
+        ArrayList<String> days = new ArrayList<String>();
+        days.add("DAY");
+        days.add("Sun");
+        days.add("Mon");
+        days.add("Tus");
+        days.add("Wed");
+        days.add("Thu");
+        days.add("Fri");
+        days.add("Sat");
+        return days;
+    }
+
+    public ArrayList<String> listOfTrash(){
+        ArrayList<String> trash = new ArrayList<String>();
+        trash.add("TRASH");
+        for (DailyWaste dailyWaste: weeklyWaste){
+            trash.add(""+dailyWaste.getTrash());
+        }
+        return trash;
+    }
+    public ArrayList<String> listOfRecycling(){
+        ArrayList<String> recycling = new ArrayList<String>();
+        recycling.add("RECYCLING");
+        for (DailyWaste dailyWaste: weeklyWaste){
+            recycling.add(""+dailyWaste.getRecycling());
+        }
+        return recycling;
+    }
+    public ArrayList<String> listOfCompost(){
+        ArrayList<String> compost = new ArrayList<String>();
+        compost.add("COMPOST");
+        for (DailyWaste dailyWaste: weeklyWaste){
+            compost.add(""+ dailyWaste.getCompost());
+        }
+        return compost;
+    }
 }
